@@ -124,6 +124,7 @@ async function main() {
 
   } catch (error) {
     console.error('Test gagal:', error.message);
+    throw error;
   } finally {
     await driver.deleteSession();
   }
